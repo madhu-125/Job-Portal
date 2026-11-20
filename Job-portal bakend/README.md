@@ -37,16 +37,16 @@ The API will be available at `http://localhost:2222`.
 ## Deploy on Render
 
 1. In Render, create a **New Web Service** and select the repository containing this backend.
-3. If the backend is in a subdirectory, set **Root Directory** to that
+2. If the backend is in a subdirectory, set **Root Directory** to that
    repository-relative directory. Select **Docker** as the runtime and leave
    the Dockerfile path as `Dockerfile` if it is in the root directory.
-4. Add these environment variables in the Render service's **Environment**
+3. Add these environment variables in the Render service's **Environment**
    settings:
    - `SPRING_DATASOURCE_URL`: the JDBC URL for your reachable MySQL-compatible
      database, including any TLS options required by your provider.
    - `SPRING_DATASOURCE_USERNAME`: database username.
    - `SPRING_DATASOURCE_PASSWORD`: database password.
-5. Create the service and wait for the Docker build and deployment to finish.
+4. Create the service and wait for the Docker build and deployment to finish.
    Render provides `PORT` at runtime; the application uses it automatically.
    Open the service's `onrender.com` URL to reach the API.
 
