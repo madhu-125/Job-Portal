@@ -16,7 +16,7 @@ Do not commit database credentials to source control.
 
 | Variable | Description |
 | --- | --- |
-| `SPRING_DATASOURCE_URL` | JDBC URL, for example `jdbc:mysql://localhost:3306/job_portal` |
+| `SPRING_DATASOURCE_URL` | JDBC URL, for example `jdbc:mysql://<host>:3306/<database>` |
 | `SPRING_DATASOURCE_USERNAME` | Database username |
 | `SPRING_DATASOURCE_PASSWORD` | Database password |
 
@@ -26,7 +26,7 @@ From this directory, set the database variables in your shell and run the
 Maven Wrapper:
 
 ```powershell
-$env:SPRING_DATASOURCE_URL = "jdbc:mysql://localhost:3306/job_portal"
+$env:SPRING_DATASOURCE_URL = "jdbc:mysql://<host>:3306/<database>"
 $env:SPRING_DATASOURCE_USERNAME = "<username>"
 $env:SPRING_DATASOURCE_PASSWORD = "<password>"
 .\mvnw.cmd spring-boot:run
@@ -36,8 +36,7 @@ The API will be available at `http://localhost:2222`.
 
 ## Deploy on Render
 
-1. Push this backend project to a GitHub repository connected to Render.
-2. In Render, create a **New Web Service** and select the repository.
+1. In Render, create a **New Web Service** and select the repository containing this backend.
 3. If the backend is in a subdirectory, set **Root Directory** to that
    repository-relative directory. Select **Docker** as the runtime and leave
    the Dockerfile path as `Dockerfile` if it is in the root directory.
