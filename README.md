@@ -16,7 +16,7 @@ Do not commit database credentials to source control.
 
 | Variable | Description |
 | --- | --- |
-| `SPRING_DATASOURCE_URL` | mysql://su7aHp5vSKZ635z.root:gPfpWZshSh7pRvgH@gateway01.ap-northeast-1.prod.aws.tidbcloud.com:4000/job_portal` |
+| `SPRING_DATASOURCE_URL` | JDBC URL, for example `jdbc:mysql://<host>:3306/<database>` |
 | `SPRING_DATASOURCE_USERNAME` | Database username |
 | `SPRING_DATASOURCE_PASSWORD` | Database password |
 
@@ -36,7 +36,7 @@ The API will be available at `http://localhost:2222`.
 
 ## Deploy on Render
 
-1. Push this backend project to a GitHub repository connected to Render.
+1. In Render, create a **New Web Service** and select the repository containing this backend.
 2. In Render, create a **New Web Service** and select the repository.
 3. If the backend is in a subdirectory, set **Root Directory** to that
    repository-relative directory. Select **Docker** as the runtime and leave
