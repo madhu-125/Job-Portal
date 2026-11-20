@@ -16,7 +16,7 @@ Do not commit database credentials to source control.
 
 | Variable | Description |
 | --- | --- |
-| `SPRING_DATASOURCE_URL` | JDBC URL, for example `jdbc:mysql://localhost:3306/job_portal` |
+| `SPRING_DATASOURCE_URL` | mysql://su7aHp5vSKZ635z.root:gPfpWZshSh7pRvgH@gateway01.ap-northeast-1.prod.aws.tidbcloud.com:4000/job_portal` |
 | `SPRING_DATASOURCE_USERNAME` | Database username |
 | `SPRING_DATASOURCE_PASSWORD` | Database password |
 
